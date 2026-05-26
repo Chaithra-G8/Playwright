@@ -5,6 +5,7 @@ test(' Verify Login with valid credential', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Username' }).fill(process.env.APP_USERNAME);
   await page.getByRole('textbox', { name: 'Password' }).fill(process.env.APP_PASSWORD);
   await page.getByRole('button', { name: 'Login' }).click();
+  await page,waitForTimeout(1000)
   await expect(page.getByText('Time at Work')).toBeVisible();
 });
 
