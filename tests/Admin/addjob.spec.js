@@ -5,8 +5,8 @@ import { faker } from '@faker-js/faker';
 
 test('Verify add job', async ({ page }) => {
 await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-await page.locator('input[name="username"]').fill(logindata.username)
-await page.locator('input[type="password"]').fill(logindata.password)
+await page.locator('input[name="username"]').fill(process.env.APP_USERNAME)
+await page.locator('input[type="password"]').fill(process.env.APP_PASSWORD)
 await page.keyboard.press('Enter')
 await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
 await page.getByRole('link', { name: 'Admin' }).click()
