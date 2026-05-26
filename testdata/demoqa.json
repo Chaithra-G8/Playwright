@@ -1,0 +1,18 @@
+{
+  "testCases": [
+    {
+      "id": 1,
+      "description": "DemoQA Text Box Form Submission",
+      "fullName": "Chaithra G",
+      "email": "chaithra842001@gmail.com",
+      "currentAddress": "bangalore",
+      "permanentAddress": "Bangalore",
+      "expectedResults": {
+        "nameText": "Name:Chaithra G",
+        "emailText": "Email:chaithra842001@gmail.com",
+        "currentAddressText": "Current Address :bangalore",
+        "permanentAddressText": "Permananet Address :Bangalore"
+      }
+    }
+  ]
+}
